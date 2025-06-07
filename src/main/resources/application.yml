@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: ecom-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sashinde8770/ecom-config-server
+          default-label: main
+          clone-on-start: true
+          skipSslValidation: true
+          # If it's a private repo:
+#          username: your-github-username
+#          password: your-github-personal-access-token
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
