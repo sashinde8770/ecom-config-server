@@ -4,17 +4,15 @@ server:
 spring:
   application:
     name: ecom-config-server
+
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/sashinde8770/ecom-config-server
+          uri: https://github.com/sashinde8770/ecom-config-repo
           default-label: main
           clone-on-start: true
           skipSslValidation: true
-          # If it's a private repo:
-#          username: your-github-username
-#          password: your-github-personal-access-token
 
 eureka:
   client:
